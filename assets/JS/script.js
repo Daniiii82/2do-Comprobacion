@@ -1,4 +1,5 @@
-const carrusel = document.getElementById("carrusel");
+/* Esto es para que funcione el carrusel
+ */const carrusel = document.getElementById("carrusel"); /* se llama el id que esta colocado en el index */
 
 if (carrusel) {
     const slides = carrusel.querySelectorAll(".diapositiva");
@@ -13,22 +14,22 @@ if (carrusel) {
         anuncio.textContent = "Mostrando " + slides[actual].querySelector("h3").textContent + ".";
     }
 
-    anterior.addEventListener("click", function () {
+    anterior.addEventListener("click", function () { /* cuando en el sitio web se genera un clic en el boton activa esto y esto llama a la funcion y muestra la anterior diapositiva */
         mostrar(actual - 1);
     });
 
-    siguiente.addEventListener("click", function () {
+    siguiente.addEventListener("click", function () {/* cuando en el sitio web se genera un clic en el boton activa esto y esto llama a la funcion y muestra la siguiente diapositiva */
         mostrar(actual + 1);
     });
 }
-/* Validación accesible del formulario */
+/* Validación del formulario */
 const formulario = document.getElementById("formulario");
 
 if (formulario) {
     formulario.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const campos = [
+        const campos = [ /* mensajes que se colocan en caso de que la persona no haya rellenado correctamente el formulario */
             { campo: document.getElementById("nombre"), error: document.getElementById("errorNombre"), mensaje: "Debe escribir su nombre." },
             { campo: document.getElementById("correo"), error: document.getElementById("errorCorreo"), mensaje: "Debe escribir un correo electrónico válido." },
             { campo: document.getElementById("carro"), error: document.getElementById("errorCarro"), mensaje: "Debe seleccionar un carro." },

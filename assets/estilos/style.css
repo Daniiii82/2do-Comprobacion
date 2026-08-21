@@ -3,7 +3,7 @@
 }
 
 
-body {
+body { /* estilo para la pagina completa */
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
@@ -12,7 +12,7 @@ body {
 }
 
 header,
-footer {
+footer { /* estilos para el encabezado y el pie de pagina */
     background: #222222;
     color: white;
     padding: 20px;
@@ -111,12 +111,12 @@ button,
 button:hover,
 button:focus,
 .boton:hover,
-.boton:focus {
+.boton:focus { /* estilos a los botones para cuando se le pone el mouse encima y cunadonse precionan */
     background: #003d82;
 }
 
 
-table {
+table { /* estilos para la tabla */
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -134,10 +134,70 @@ td {
     padding: 12px;
     text-align: left;
 }
+
 th {
-    background: #ddd;
+    background: #dddddd;
 }
 
 form {
     max-width: 600px;
 }
+
+fieldset {
+    padding: 20px;
+    border: 1px solid #777777;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+}
+
+.error {
+    display: block;
+    color: #a00000;
+    font-weight: bold;
+    min-height: 1.5em;
+}
+
+#resultado {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-contenedor {
+    max-width: 700px;
+}
+
+a:focus, /* esto es para cuando le doy a un boton de la barra de navegacion arriba y cunaod seleciono alguna parte del formulario */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #ffbf00;
+   
+}
+

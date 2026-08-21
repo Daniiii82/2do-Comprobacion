@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header><!-- Menu principal de navegacion --> 
         <h1 id="titulo">Contacto</h1>
         <p id="descripcion-header">Complete el formulario para solicitar información sobre un vehículo.</p>
         <nav aria-label="Menú principal">
@@ -22,18 +22,21 @@
     </header>
     <main>
         <section aria-labelledby="solicitud">
-            <h2 id="solicitud">Solicitud de informacion</h2>
-            <p id="instrucciones">Los campos marcados con * son obligatorios, si te brinca algun error revisar rellenar
-                correctamente los campos</p>
-            <form aid="formulario" aria-describedby="instrucciones">
+            <h2 id="solicitud">Solicita información</h2>
+            <p id="instrucciones">Los campos marcados con * son obligatorios. Revise los mensajes de error antes de
+                enviar el formulario.</p>
+<!-- formulario con conexion de a js -->
+            <form id="formulario" novalidate aria-describedby="instrucciones">
                 <fieldset>
                     <legend>Datos del cliente</legend>
 
                     <label for="nombre">Nombre *</label>
-                    <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="errorNombre">
+                    <input type="text" id="nombre" name="nombre"  required aria-describedby="errorNombre">
+                   <!--    muestra un mensaje de error -->
                     <span id="errorNombre" class="error" role="alert"></span>
                     <label for="correo">Correo electrónico *</label>
-                    <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="errorCorreo">
+                    <input type="email" id="correo" name="correo"  required aria-describedby="errorCorreo">
+                    <!--    muestra un mensaje de error -->
                     <span id="errorCorreo" class="error" role="alert"></span>
                     <label for="carro">Carro de interés *</label>
                     <select id="carro" name="carro" required aria-describedby="errorCarro">
@@ -42,21 +45,22 @@
                         <option value="Honda Civic">Honda Civic</option>
                         <option value="Hyundai Tucson">Hyundai Tucson</option>
                     </select>
+                 <!--    muestra un mensaje de error -->
                     <span id="errorCarro" class="error" role="alert"></span>
 
                     <label for="mensaje">Mensaje *</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required aria-describedby="errorMensaje"></textarea>
+                    <!--    muestra un mensaje de error -->
                     <span id="errorMensaje" class="error" role="alert"></span>
 
                     <button type="submit">Enviar solicitud</button>
                 </fieldset>
             </form>
-             <p id="resultado" role="status" aria-live="polite"></p>
+            <p id="resultado" role="status" aria-live="polite"></p>
         </section>
-        
     </main>
-        <footer>
-        <p>&copy; Derechos reservados a AutosNova</p>
+    <footer>
+        <p>&copy; Derechos reservados a AutoNova</p>
     </footer>
     <script src="assets/JS/script.js"></script>
 </body>
