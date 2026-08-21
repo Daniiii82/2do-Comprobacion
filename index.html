@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=6, initial-scale=1.0">
+    <title>AutoNova</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">AutosNova</h1>
+        <p id="descripcion-header">Empresa encargada de venta de autos usados, en excelente estado</p>
+        <nav aria-label="Menu principal">
+            <ul class="menu">
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section aria-labelledby="bienvenida">
+            <h2>Encuentra tu proximo vehiculo con nosotros</h2>
+            <p>Tenemos diferentes estilos de carros a precios accesibles</p>
+        </section>
+        <section aria-labelledby="carrusel-titulo">
+            <h2 id="carrusel-titulo">Vehiculos destacados en venta</h2>
+            <p>Con los botones en la parte inferior del carrusel puede desplazarse dentro del carrusel</p>
+
+            <div class="carrusel" id="carrusel" role="region" aria-label="Vehículos destacados">
+                <div class="diapositiva activa">
+                    <img src="assets/imagenes/Corolla.jpg"
+                        alt="Un Toyota SUV gris está aparcado dentro de un taller automovilístico con herramientas, equipos y otro vehículo visibles al fondo.">
+                    <h3>Toyota Corolla</h3>
+                    <p>Año 2024 - ₡17.500.000</p>
+                </div>
+                <div class="diapositiva activa">
+                    <img src="assets/imagenes/honda type r.jpg"
+                        alt="Un Honda Civic Type R gris con llantas negras y faros antiniebla amarillos está estacionado en una calle residencial bordeada de casas y vegetación.">
+                    <h3>Honda Civic Type R</h3>
+                    <p>Año 2023 - ₡16.900.000</p>
+                </div>
+                <div class="diapositiva activa">
+                    <img src="assets/imagenes/Tucson.jpg"
+                        alt="Un SUV Hyundai blanco está estacionado en el interior, mirando hacia adelante. La matrícula dice “LYD-186”. La parrilla y los faros son claramente visibles.">
+                    <h3>Hyundai Tucson</h3>
+                    <p>Año 2024 - ₡21.300.000</p>
+                </div>
+            </div>
+            <div class="controles-carrusel">
+                <button type="button" id="anterior" aria-label="Mostrar vehículo anterior">Anterior</button>
+                <button type="button" id="siguiente" aria-label="Mostrar vehículo siguiente">Siguiente</button>
+            </div>
+        </section>
+        <section aria-labelledby="video-titulo">
+            <h2 id="video-titulo">Video del Honda Type R</h2>
+            <p>El video tiene controles para reproducir, pausar y regular el volumen. Tambien contiene subtitulos</p>
+            <div class="video-contenedor">
+                <video controls width="700" aria-describedby="video-descripcion">
+                    <source src="assets/video/VideoTypeR.mp4" type="video/mp4">
+                    <track src="assets/VTT/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+                    Su navegador no puede reproducir este video.
+                </video>
+                <p id="video-descripcion">Video informativo sobre la venta de vehículos. Los subtítulos se proporcionan
+                    mediante un archivo VTT.</p>
+            </div>
+        </section>
+        <p><a class="boton" href="catalogo.html">Ver catálogo completo</a></p>
+    </main>
+    <footer>
+        <p>&copy; Derechos reservados a AutosNova</p>
+    </footer>
+</body>
+
+</html>
