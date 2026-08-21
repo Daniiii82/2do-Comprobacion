@@ -26,8 +26,8 @@
             <p>Tenemos diferentes estilos de carros a precios accesibles</p>
         </section>
         <section aria-labelledby="carrusel-titulo">
-            <h2 id="carrusel-titulo">Vehiculos destacados en venta</h2>
-            <p>Con los botones en la parte inferior del carrusel puede desplazarse dentro del carrusel</p>
+            <h2 id="carrusel-titulo">Vehículos en Venta</h2>
+            <p>Use los botones Anterior y Siguiente para cambiar de vehículo.</p>
 
             <div class="carrusel" id="carrusel" role="region" aria-label="Vehículos destacados">
                 <div class="diapositiva activa">
@@ -36,23 +36,25 @@
                     <h3>Toyota Corolla</h3>
                     <p>Año 2024 - ₡17.500.000</p>
                 </div>
-                <div class="diapositiva activa">
+                <div class="diapositiva" hidden>
                     <img src="assets/imagenes/honda type r.jpg"
                         alt="Un Honda Civic Type R gris con llantas negras y faros antiniebla amarillos está estacionado en una calle residencial bordeada de casas y vegetación.">
                     <h3>Honda Civic Type R</h3>
-                    <p>Año 2023 - ₡16.900.000</p>
+                    <p>Año 2026 - ₡16.900.000</p>
                 </div>
-                <div class="diapositiva activa">
+                <div class="diapositiva" hidden>
                     <img src="assets/imagenes/Tucson.jpg"
                         alt="Un SUV Hyundai blanco está estacionado en el interior, mirando hacia adelante. La matrícula dice “LYD-186”. La parrilla y los faros son claramente visibles.">
                     <h3>Hyundai Tucson</h3>
                     <p>Año 2024 - ₡21.300.000</p>
                 </div>
+
+                <div class="controles-carrusel">
+                    <button type="button" id="anterior" aria-label="Mostrar vehículo anterior">Anterior</button>
+                    <button type="button" id="siguiente" aria-label="Mostrar vehículo siguiente">Siguiente</button>
+                </div>
             </div>
-            <div class="controles-carrusel">
-                <button type="button" id="anterior" aria-label="Mostrar vehículo anterior">Anterior</button>
-                <button type="button" id="siguiente" aria-label="Mostrar vehículo siguiente">Siguiente</button>
-            </div>
+            <p id="anuncio-carrusel" aria-live="polite" class="sr-only"></p>
         </section>
         <section aria-labelledby="video-titulo">
             <h2 id="video-titulo">Video del Honda Type R</h2>
@@ -60,7 +62,7 @@
             <div class="video-contenedor">
                 <video controls width="700" aria-describedby="video-descripcion">
                     <source src="assets/video/VideoTypeR.mp4" type="video/mp4">
-                    <track src="assets/VTT/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+                    <track src="assets/VTT/subtitulos.vtt" kind="captions" default>
                     Su navegador no puede reproducir este video.
                 </video>
                 <p id="video-descripcion">Video informativo sobre la venta de vehículos. Los subtítulos se proporcionan
@@ -72,6 +74,7 @@
     <footer>
         <p>&copy; Derechos reservados a AutosNova</p>
     </footer>
+    <script src="assets/JS/script.js"></script>
 </body>
 
 </html>

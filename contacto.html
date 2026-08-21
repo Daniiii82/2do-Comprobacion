@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto-Venta de autos</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">Contacto</h1>
+        <p id="descripcion-header">Complete el formulario para solicitar información sobre un vehículo.</p>
+        <nav aria-label="Menú principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section aria-labelledby="solicitud">
+            <h2 id="solicitud">Solicitud de informacion</h2>
+            <p id="instrucciones">Los campos marcados con * son obligatorios, si te brinca algun error revisar rellenar
+                correctamente los campos</p>
+            <form aid="formulario" aria-describedby="instrucciones">
+                <fieldset>
+                    <legend>Datos del cliente</legend>
+
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="errorNombre">
+                    <span id="errorNombre" class="error" role="alert"></span>
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="errorCorreo">
+                    <span id="errorCorreo" class="error" role="alert"></span>
+                    <label for="carro">Carro de interés *</label>
+                    <select id="carro" name="carro" required aria-describedby="errorCarro">
+                        <option value="">Seleccione un carro</option>
+                        <option value="Toyota Corolla">Toyota Corolla</option>
+                        <option value="Honda Civic">Honda Civic</option>
+                        <option value="Hyundai Tucson">Hyundai Tucson</option>
+                    </select>
+                    <span id="errorCarro" class="error" role="alert"></span>
+
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required aria-describedby="errorMensaje"></textarea>
+                    <span id="errorMensaje" class="error" role="alert"></span>
+
+                    <button type="submit">Enviar solicitud</button>
+                </fieldset>
+            </form>
+             <p id="resultado" role="status" aria-live="polite"></p>
+        </section>
+        
+    </main>
+        <footer>
+        <p>&copy; Derechos reservados a AutosNova</p>
+    </footer>
+    <script src="assets/JS/script.js"></script>
+</body>
+
+</html>

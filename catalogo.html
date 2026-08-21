@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catalogo de vehiculos</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1 id="titulo">Catálogo de Carros</h1>
+        <p id="descripcion-header">Consulte los vehículos disponibles, su año y precio.</p>
+        <nav aria-label="Menú principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section aria-labelledby="disponibles">
+            <h2 id="disponibles">Carros disponibles</h2>
+            <p id="descripcion-tabla">La tabla presenta el nombre del vehículo, su año y su precio en colones
+                costarricenses.</p>
+            <table aria-describedby="descripcion-tabla">
+                <caption>Información de los carros disponibles</caption>
+                <thead>
+                    <tr>
+                        <th>Carro</th>
+                        <th>Año</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toyota Corolla</td>
+                        <td>2024</td>
+                        <td>₡17.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>Honda Civic Type R</td>
+                        <td>2026</td>
+                        <td>₡16.900.000</td>
+                    </tr>
+                    <tr>
+                        <td>Hyundai Tucson</td>
+                        <td>2024</td>
+                        <td>₡21.300.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section aria-labelledby="caracteristicas">
+            <h2 id="caracteristicas">Características generales</h2>
+            <ul>
+                <li>Carros revisados.</li>
+                <li>Modelos recientes.</li>
+                <li>Opciones de financiamiento.</li>
+                <li>Atención personalizada.</li>
+            </ul>
+        </section>
+        <p><a href="contacto.html" class="boton">Solicitar Informacion de un carro</a></p>
+    </main>
+        <footer>
+        <p>&copy; Derechos reservados a AutosNova</p>
+    </footer>
 </body>
+
 </html>
